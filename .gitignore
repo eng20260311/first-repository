@@ -1,0 +1,56 @@
+# ───────────────────────────────────────────────
+# 논문챗봇 프로젝트 — 깃허브에는 아래 파일만 올라갑니다
+#   논문챗봇_파이프라인.ipynb / 논문챗봇_README.md / requirements.txt
+#   app/ (paper_*.py + 재사용 모듈) / frontend/app_paper.py
+# 그 외 다른 Day 실습물·대용량 파일은 모두 제외합니다.
+# ───────────────────────────────────────────────
+
+# 가상환경 / 캐시
+.venv_Khh/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# 모델 가중치 / 대용량 데이터 디렉터리
+models/
+data/
+notebooks/
+
+# 이미지·스크린샷
+*.png
+*.jpg
+*.jpeg
+
+# 백업 / 생성물 / 임시 파일
+*.bak
+test_paper.pdf
+
+# 다른 Day 실습 노트북은 제외하고, 논문챗봇 노트북만 포함
+*.ipynb
+!논문챗봇_파이프라인.ipynb
+
+# 다른 Day 메모/구조 문서 제외 (논문챗봇_README.md만 포함)
+DAY*.md
+PROJECT_STRUCTURE*.md
+_make_tree.py
+requirements_freeze.txt
+
+# app/ — 논문챗봇 관련 모듈만 포함
+app/*
+!app/__init__.py
+!app/auth.py
+!app/logger_config.py
+!app/error_handlers.py
+!app/middleware.py
+!app/paper_utils.py
+!app/paper_schemas.py
+!app/paper_model.py
+!app/paper_api.py
+
+# frontend/ — 논문챗봇 UI만 포함
+frontend/*
+!frontend/app_paper.py
